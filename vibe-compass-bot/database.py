@@ -1,6 +1,13 @@
 """
 Модуль для работы с базой данных
 """
+import sys
+import os
+
+# Настройка UTF-8 для Windows
+if sys.platform == 'win32':
+    os.environ['PYTHONIOENCODING'] = 'utf-8'
+
 from sqlalchemy import create_engine, Column, Integer, String, DateTime, Boolean, Text
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker

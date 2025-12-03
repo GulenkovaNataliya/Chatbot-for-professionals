@@ -2,6 +2,13 @@
 Главный файл бота "Вайб-Компас Освобождения"
 Запуск: python bot.py
 """
+import sys
+import os
+
+# Настройка UTF-8 для Windows
+if sys.platform == 'win32':
+    os.environ['PYTHONIOENCODING'] = 'utf-8'
+
 from telegram.ext import (
     Application,
     CommandHandler,
